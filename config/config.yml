@@ -31,7 +31,7 @@ vagrant_synced_folders:
   # The first synced folder will be used for the default Drupal installation, if
   # any of the build_* settings are 'true'. By default the folder is set to
   # the drupal-vm folder.
-  - local_path: .
+  - local_path: . # Change to look at hm public path on your machine
     destination: /var/www/drupalvm
     type: nfs
     create: true
@@ -66,7 +66,7 @@ drush_make_options: "--no-gitinfofile"
 
 # Set 'build_makefile' to 'false' and this to 'true' if you are using a
 # composer based site deployment strategy.
-drupal_build_composer: true
+drupal_build_composer: false
 drupal_composer_path: false
 drupal_composer_install_dir: "/var/www/drupalvm"
 drupal_composer_dependencies:
@@ -80,10 +80,10 @@ drupal_composer_project_options: "--prefer-dist --stability dev --no-interaction
 
 # Set this to 'false' if you don't need to install drupal (using the drupal_*
 # settings below), but instead copy down a database (e.g. using drush sql-sync).
-drupal_install_site: true
+drupal_install_site: false
 
 # Required Drupal settings.
-drupal_core_path: "{{ drupal_composer_install_dir }}/web"
+drupal_core_path: "{{ drupal_composer_install_dir }}"
 drupal_core_owner: "{{ drupalvm_user }}"
 drupal_db_user: drupal
 drupal_db_password: drupal
