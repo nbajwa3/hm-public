@@ -8,7 +8,7 @@ This project repository contains the Drupal 8 scaffolding for the public THM sit
     * Composer >= 1.2.3
     * Ansible >= 2.3.1.0
     * Vagrant >= 1.9.0
-2. From your terminal, clone the repository locally using `git clone git@github.com:TheHistoryMakers/hm-public.git`.
+2. From your terminal, clone the repository locally using `git clone git@github.com:sardell/hm-public.git`.
 3. From the root of the project, install all Composer dependencies by running `composer install`.
 4. Inside the config folder, create a new file called `local.config.yml` and add the following, keeping in mind to fill in the path to your project locally without the double curly braces:
 ```
