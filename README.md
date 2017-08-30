@@ -21,13 +21,14 @@ vagrant_synced_folders:
     type: nfs
     create: true
 ```
-5. From the root of the project, run `vagrant up` in your terminal. the first time you run the command, Drupal VM will create a new virtual machine for you. This will take a few minutes to download and setup.
-6. Visit http://dashboard.hm-public.dev/ to take a look at the VM dashboard. From there, you will find links to the following
+5. Front the root of the project, run `vagrant plugin install vagrant-bindfs` in your terminal.
+6. From the root of the project, run `vagrant up` in your terminal. the first time you run the command, Drupal VM will create a new virtual machine for you. This will take a few minutes to download and setup.
+7. Visit http://dashboard.hm-public.dev/ to take a look at the VM dashboard. From there, you will find links to the following
     * The Drupal site itself.
     * The database management UI (uses [Adminer](https://www.adminer.org/)).
     * A page for viewing log files on the Apache server.(uses [Pimp my log](http://pimpmylog.com/)).
-7. Import the current development database (contact someone within the dev team for this).
-8. If you need access into the VM, run `vagrant ssh` from the project root.
+8. Import the current development database (contact someone within the dev team for this).
+9. If you need access into the VM, run `vagrant ssh` from the project root.
 
 ## Managing Drupal dependencies with Composer
 
